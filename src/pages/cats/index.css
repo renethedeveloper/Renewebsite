@@ -1,0 +1,16 @@
+.catDiv{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+    
+}
+*{
+    background-color: antiquewhite;
+}
+.catPic{
+    height: 400px;
+    width: 400px;
+}
+.photo_and_text{
+    display: flex;
+    flex-direction: row;
+}
