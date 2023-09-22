@@ -1,5 +1,35 @@
-.catPics{
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.catPics {
     max-width: 300px;
     max-height: 400px;
-
-}
+  }
+  
+  .catToySection {
+    display: grid;
+    float: right;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 50vw;
+  }
+  
+  .catToyCard {
+   
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .catToyImages {
+    max-width: 100px;
+  }
+  

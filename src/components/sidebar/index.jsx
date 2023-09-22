@@ -4,7 +4,7 @@ import StarTwoToneIcon from '@mui/icons-material/StarTwoTone';
 const SideBar = (star) => {
   return (
     <div className='sidebar'>
-      <button></button>
+      <button>Hello? </button>
       <button></button>
       <button></button>
     </div>

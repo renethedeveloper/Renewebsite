@@ -1,10 +1,20 @@
 import React from 'react'
+import { Link, useParams } from 'react-router-dom';
 
-const About = (star) => {
+const About = () => {
+  const { id } = useParams();
+
   return (
     <div className='about'>
       <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eligendi odio voluptates, ratione dignissimos minima ut suscipit ea asperiores debitis mollitia repellat nobis tempore, commodi at culpa earum nulla ad!</p>
+      <p>{`This is the about page. My name is Rene Rodriguez and I am a budding software engineer/UX designer. My interests are cats, boxing, travel, food, literature, and building and designing cool applications. I am still learning  so bare with me. I tried to add Params to this page but I wasn't even sure what the hell they were. ${id}`}</p>
+
+     
+      <Link to="/Felines">
+        <button>Click here for Felines</button>
+      </Link>
+
+      <p></p>
     </div>
   )
 }
