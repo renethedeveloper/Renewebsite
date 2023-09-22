@@ -20,7 +20,7 @@ const buttonText = isClicked ? "Deactivate" : "Activate"
     <div  style={{backgroundColor}}className='navbar'>
     <h1>Welcome to the Renarium!</h1>
     <Link to="/" className='navButtonLink'>Home</Link>
-    <Link to="/Display" className='navButtonLink'>Display</Link>
+    <Link to="/Products" className='navButtonLink'>Products</Link>
     <Link to="/cats" className='navButtonLink'>Cats</Link>
     <Link to="/about" className='navButtonLink'>About</Link>
     <Link to="/contact" className='navButtonLink'>Contact</Link>

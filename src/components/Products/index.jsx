@@ -3,9 +3,10 @@ import axios from 'axios';
 import "./index.css"
 import Random from '../../pages/randomCat';
 import { Link, useParams } from 'react-router-dom';
-import { Params } from 'react-router-dom';
+import SingleProduct from '../SingleProduct';
 
-const Display = ({itemID}) => {
+
+const Products = ({itemID}) => {
   const params = useParams();
   const [cats, setCats] = useState([]);
   const [catToys, setCatToys] = useState(
@@ -85,25 +86,30 @@ const Display = ({itemID}) => {
           <img className="catPics" src={cat.url} alt={`Breed: ${cat.breeds[0]?.name}`} />
         </div>
       ))}
+      
+      {/* <SingleProduct catToys={catToys} /> */}
 
       <div className='catToySection'>
-        <h3>Check out these cat toys for sale!</h3>
+        <h3>Check out these Cat Toys for sale!</h3>
         <div className='catToyGrid'>
           {catToys.map((item) => (
-            <div className='catToyCard' key={item.id}>
-              <div className='catToyInfo'>
-                <h4>{item.name}</h4>
-                <p>{item.description}</p>
-                <p>Price: ${item.price}</p>
-                <p>Item ID: {itemID}</p> {/* Display itemID here */}
+            
+            <Link to={`/Products/${item.id}`} key={item.id}>
+              <div className='catToyCard' key={item.id}>
+                <div className='catToyInfo'>
+                  <h4>{item.name}</h4>
+                  <p>{item.description}</p>
+                  <p>Price: ${item.price}</p>
+                </div>
+                <img className="catToyImages" src={item.image} alt={item.id} />
               </div>
-              <img className="catToyImages" src={item.image} alt={item.id} />
-            </div>
+            </Link>
           ))}
+           
         </div>
       </div>
     </div>
   );
 };
 
-export default Display;
+export default Products;
