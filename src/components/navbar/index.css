@@ -1,11 +1,19 @@
 /* Add this to your CSS file (index.css or a separate CSS file) */
 
+*{
+  border-radius: 10px;
+}
+
+
 .navbar {
-    display: flex;
+    display: grid;
+    grid-template-rows: 2;
     justify-content: space-around;
     align-items: center;
     background-color: lightgreen; /* Icy orange background color */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
+    font-weight: 500;
+    font-size: larger;
     height: 200px;
     width: 100vw;
   }
@@ -24,4 +32,10 @@
   
   .navButtonLink:hover {
     background-color: #2674A6; /* Slightly darker blue for hover effect */
+  }
+  h1{
+    color:white;
+   
+    font-size: larger;
+    font-family: monospace;
   }

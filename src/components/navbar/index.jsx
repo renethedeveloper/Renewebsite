@@ -18,7 +18,10 @@ const buttonText = isClicked ? "Deactivate" : "Activate"
     
   return (
     <div  style={{backgroundColor}}className='navbar'>
+      <div className='title_div'>
     <h1>Welcome to the Renarium!</h1>
+    </div>
+    <div className='links'>
     <Link to="/" className='navButtonLink'>Home</Link>
     <Link to="/Products" className='navButtonLink'>Products</Link>
     <Link to="/cats" className='navButtonLink'>Cats</Link>
@@ -26,6 +29,7 @@ const buttonText = isClicked ? "Deactivate" : "Activate"
     <Link to="/contact" className='navButtonLink'>Contact</Link>
     <Link to="/Random" className='navButtonLink'>RandomCat</Link>
     <button className='navButton'  onClick={handleClick}>{buttonText}<StarTwoToneIcon/></button>
+    </div>
   </div>
   )
 }

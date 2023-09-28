@@ -8,19 +8,22 @@ const SingleProduct = ({ catToys }) => {
   const { itemID } = useParams();
   console.log(itemID)
 
-  // Find the product with the matching itemID
+  //match catToy with id
   const product = catToys.find(item => item.id === parseInt(itemID, 10));
 
   if (!product) {
-    // Handle the case where the product with the given itemID is not found
+   //what if product isn't found?
     return <div>Product not found</div>;
   }
 
   return (
     <div className='singleProduct'>
-      <h2>Single Product</h2>
-      <h4>Product {itemID}</h4>
-      <h4>{product.name}</h4>
+      {/* <h2>Single Product</h2> */}
+      {/* <h4>Product {itemID}</h4> */}
+      <h3>{product.name}</h3>
+      <h4 >{product.description2}</h4>
+      <img style={{ maxWidth: "300px" }} src={product.image} alt={product.image} />
+
       <Link to="/Products">Back to Products</Link><br />
     </div>
   );

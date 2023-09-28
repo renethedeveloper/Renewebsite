@@ -21,7 +21,9 @@ const Random = () => {
         console.error("Error fetching data:", error);
       });
   };
-
+  useEffect(()=>{
+    generateRandomCat();
+  },[])
   const handleClick = () => {
     generateRandomCat();
   };

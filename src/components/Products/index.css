@@ -1,35 +1,36 @@
-
 .container{
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
 }
 
-.catPics {
-    max-width: 300px;
-    max-height: 400px;
-  }
-  
-  .catToySection {
-    display: grid;
-    float: right;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 10px;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    width: 50vw;
-  }
-  
-  .catToyCard {
-   
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-  }
-  
-  .catToyImages {
-    max-width: 100px;
-  }
-  
+.catToySection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 70vw;
+}
+
+.catToyCard {
+  border: 1px solid #ccc;
+  background-color: rgb(232, 191, 130);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  /* Optional: Set a fixed height for each card if needed */
+ max-height: 300px; /* Adjust as needed */
+}
+
+.catToyImages {
+  max-width: 180px;
+  Optional: Center the image horizontally
+  margin: 0 auto;
+}
+.catPics{
+  max-width: 200px;
+}
+.catToyTitle{
+  margin: auto;
+}
